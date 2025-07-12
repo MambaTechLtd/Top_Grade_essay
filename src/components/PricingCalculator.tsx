@@ -70,9 +70,8 @@ export default function PricingCalculator() {
   };
 
   const handleWhatsAppClick = () => {
-    const orderDetails = generateOrderMessage();
-    const encodedMessage = encodeURIComponent(orderDetails);
-    window.open(`https://wa.me/254717001076?text=${encodedMessage}`, '_blank');
+    // Contact through WeChat only
+    alert('Please scan the WeChat QR code to contact us');
   };
 
   const generateOrderMessage = () => {
@@ -425,11 +424,10 @@ Please provide the following details:
                   </div>
 
                   <button 
-                    onClick={handleWhatsAppClick}
-                    className="w-full mt-6 bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-6 rounded-xl transition-all duration-300 flex items-center justify-center group"
+                    disabled
+                    className="w-full bg-gray-500 text-white font-semibold py-3 px-6 rounded-xl opacity-50 cursor-not-allowed"
                   >
-                    Order Now via WhatsApp
-                    <MessageCircle className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                    Contact via WeChat QR Code
                   </button>
                 </div>
 
@@ -528,47 +526,37 @@ Please provide the following details:
         {/* Contact Section */}
         <div className="mb-16">
           <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
-            <h2 className="text-3xl font-bold text-white text-center mb-8">Multiple Ways to Connect</h2>
+            <h2 className="text-3xl font-bold text-white text-center mb-8">Contact Us</h2>
             <div className="grid lg:grid-cols-3 gap-8 items-center">
               
               {/* Contact Information */}
               <div className="space-y-6">
-                <h3 className="text-xl font-semibold text-white mb-4">Get in Touch</h3>
+                <h3 className="text-xl font-semibold text-white mb-4">Our Pricing</h3>
                 
                 <div className="space-y-4">
                   <div className="flex items-center">
-                    <MessageCircle className="h-6 w-6 text-mint-400 mr-3" />
+                    <BookOpen className="h-6 w-6 text-mint-400 mr-3" />
                     <div>
-                      <p className="text-white font-medium">WhatsApp</p>
-                      <p className="text-gray-300 text-sm">+254717001076</p>
+                      <p className="text-white font-medium">Non-Technical Writing</p>
+                      <p className="text-gray-300 text-sm">$20 per page</p>
                     </div>
                   </div>
                   
                   <div className="flex items-center">
-                    <MessageCircle className="h-6 w-6 text-green-400 mr-3" />
+                    <Zap className="h-6 w-6 text-amber-400 mr-3" />
                     <div>
-                      <p className="text-white font-medium">WeChat</p>
-                      <p className="text-gray-300 text-sm">Scan QR code to connect</p>
+                      <p className="text-white font-medium">Technical Writing</p>
+                      <p className="text-gray-300 text-sm">$25 per page</p>
                     </div>
                   </div>
                   
                   <div className="flex items-center">
-                    <MessageCircle className="h-6 w-6 text-blue-400 mr-3" />
+                    <Award className="h-6 w-6 text-purple-400 mr-3" />
                     <div>
-                      <p className="text-white font-medium">Email</p>
-                      <p className="text-gray-300 text-sm">bramueljuma9@gmail.com</p>
+                      <p className="text-white font-medium">Volume Bonus</p>
+                      <p className="text-gray-300 text-sm">+10% for 10+ pages</p>
                     </div>
                   </div>
-                </div>
-                
-                <div className="pt-4">
-                  <button
-                    onClick={handleWhatsAppClick}
-                    className="w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 flex items-center justify-center group"
-                  >
-                    Start WhatsApp Chat
-                    <MessageCircle className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                  </button>
                 </div>
               </div>
 
@@ -576,53 +564,49 @@ Please provide the following details:
               <div className="text-center">
                 <div className="bg-white rounded-2xl p-6 shadow-xl inline-block">
                   <img 
-                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg=="
-                    alt="WeChat QR Code - Scan to add as friend"
-                    className="w-48 h-48 mx-auto"
-                    style={{
-                      background: 'url("data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 200 200\'%3E%3Crect width=\'200\' height=\'200\' fill=\'%23f3f4f6\'/%3E%3Ctext x=\'100\' y=\'100\' text-anchor=\'middle\' dy=\'.3em\' font-family=\'Arial\' font-size=\'14\' fill=\'%236b7280\'%3EWeChat QR Code%3C/text%3E%3C/svg%3E")',
-                      backgroundSize: 'cover'
-                    }}
+                    src="/wechat-qr copy.jpg"
+                    alt="WeChat Contact QR Code"
+                    className="w-64 h-64 mx-auto object-cover rounded-xl"
                   />
                   <p className="text-gray-600 text-sm mt-3 font-medium">Scan with WeChat</p>
-                  <p className="text-gray-500 text-xs">Add as friend for instant chat</p>
+                  <p className="text-gray-500 text-xs">Contact us for writing services</p>
                 </div>
               </div>
 
               {/* Contact Benefits */}
               <div className="space-y-4">
-                <h3 className="text-xl font-semibold text-white mb-4">Why Contact Us?</h3>
+                <h3 className="text-xl font-semibold text-white mb-4">Service Features</h3>
                 
                 <div className="space-y-3">
                   <div className="flex items-start">
                     <Clock className="h-5 w-5 text-mint-400 mr-3 mt-1" />
                     <div>
-                      <p className="text-white font-medium">24/7 Support</p>
-                      <p className="text-gray-300 text-sm">Round-the-clock assistance for urgent orders</p>
+                      <p className="text-white font-medium">Fast Delivery</p>
+                      <p className="text-gray-300 text-sm">Quick turnaround times for all projects</p>
                     </div>
                   </div>
                   
                   <div className="flex items-start">
                     <Users className="h-5 w-5 text-blue-400 mr-3 mt-1" />
                     <div>
-                      <p className="text-white font-medium">Direct Writer Access</p>
-                      <p className="text-gray-300 text-sm">Communicate directly with your assigned expert</p>
+                      <p className="text-white font-medium">Expert Writers</p>
+                      <p className="text-gray-300 text-sm">Professional writers with advanced degrees</p>
                     </div>
                   </div>
                   
                   <div className="flex items-start">
                     <Shield className="h-5 w-5 text-purple-400 mr-3 mt-1" />
                     <div>
-                      <p className="text-white font-medium">Secure Communication</p>
-                      <p className="text-gray-300 text-sm">Encrypted messaging for privacy protection</p>
+                      <p className="text-white font-medium">Quality Guarantee</p>
+                      <p className="text-gray-300 text-sm">100% original and plagiarism-free content</p>
                     </div>
                   </div>
                   
                   <div className="flex items-start">
-                    <Zap className="h-5 w-5 text-amber-400 mr-3 mt-1" />
+                    <Check className="h-5 w-5 text-amber-400 mr-3 mt-1" />
                     <div>
-                      <p className="text-white font-medium">Instant Quotes</p>
-                      <p className="text-gray-300 text-sm">Get pricing and timeline within minutes</p>
+                      <p className="text-white font-medium">Free Revisions</p>
+                      <p className="text-gray-300 text-sm">Unlimited revisions until satisfied</p>
                     </div>
                   </div>
                 </div>
@@ -640,26 +624,6 @@ Please provide the following details:
         </div>
       </div>
 
-      {/* WhatsApp Floating Button */}
-      <div 
-        className="fixed bottom-6 right-6 z-50"
-        onMouseEnter={() => setShowWhatsApp(true)}
-        onMouseLeave={() => setShowWhatsApp(false)}
-      >
-        <button
-          onClick={handleWhatsAppClick}
-          className="bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-2xl transition-all duration-300 hover:scale-110 animate-pulse"
-        >
-          <MessageCircle className="h-6 w-6" />
-        </button>
-        
-        {showWhatsApp && (
-          <div className="absolute bottom-16 right-0 bg-white text-gray-800 px-4 py-2 rounded-lg shadow-xl whitespace-nowrap animate-slide-up">
-            <p className="font-semibold">Need Help? Chat with us!</p>
-            <p className="text-sm text-gray-600">+254717001076</p>
-          </div>
-        )}
-      </div>
     </div>
   );
 }
