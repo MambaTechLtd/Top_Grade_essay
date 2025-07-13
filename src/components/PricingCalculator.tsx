@@ -1,4 +1,4 @@
-\import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Calculator, BookOpen, Clock, Zap, Check, ArrowRight, Users, Award, Shield, Star, MessageCircle, GraduationCap, FileText, PenTool, BookOpenCheck, Target, TrendingUp } from 'lucide-react';
 
 interface PricingState {
