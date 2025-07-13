@@ -113,6 +113,7 @@ Please provide the following details:
 • Any reference materials or sources
 
 🚀 Ready to get started with your premium academic writing service!`;
+    return `🎓 *GIANT WRITERS - ORDER REQUEST*
   };
 
   return (
@@ -122,7 +123,7 @@ Please provide the following details:
         <div className="text-center mb-16">
           <div className="flex items-center justify-center mb-6">
             <GraduationCap className="h-12 w-12 text-blue-400 mr-4" />
-            <h1 className="text-5xl font-bold text-white">Top Grade Essays Online</h1>
+            <h1 className="text-5xl font-bold text-white">Giant Writers</h1>
           </div>
           <p className="text-2xl text-gray-300 max-w-3xl mx-auto mb-8">
             Your trusted partner for premium academic writing services with expert writers and guaranteed results
